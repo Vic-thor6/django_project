@@ -1,0 +1,29 @@
+{% extends "ventas1/base_nav.html" %}
+{% block content %}
+
+<body>
+<title>Iniciar Sesion</title>
+    <!-- login form -->
+    <div class="container w-100" id="formulario-registro">
+        <h1 class="text-center">Bienvenido</h1>
+      <form class="row w-100"  id="login_ingreso" action="" method="POST">
+      {% csrf_token %}
+        <div class="col-xl">
+          <div class="col-xl-12 login-imgs">
+            <input type="email" class="form-control input_login" id="inputEmail"  placeholder="Correo" name="correo_usuario">
+            <i class="bx bx-user login-imgs"></i>
+          </div>
+          <div class="col-xl-12 login-imgs">
+            <input type="password" class="form-control input_login" id="inputPassword" placeholder="Constraseña" name="clave_usuario">
+            <i class="bx bx-lock login-imgs"></i>
+          </div>
+          <div class="col-xl-6 w-100" >
+            <button type="submit" class="btn btn-primary w-100 btn-login">Ingresar</button>
+          </div>
+        </div>
+        <a href="{% url 'registrar_cliente' %}">Registrar</a>
+      </form>
+    </div>
+</body>
+
+{% endblock content %}

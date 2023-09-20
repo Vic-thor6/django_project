@@ -1,0 +1,60 @@
+
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.navbar{
+    
+    height: 100px;
+    background: linear-gradient(rgba(34, 69, 224, 0.349), transparent);
+    
+}
+body{
+    
+    background-image: url("../img/tyhb_12.jpg");
+    background-origin: content-box;
+}
+
+#formulario-registro{
+    background-color: rgba(137, 43, 226, 0);
+    margin-top: 200px;
+    max-width: 500px;
+    height: 550px;
+}
+.input_login{
+    margin-top: 30px;
+    border: none;
+    border-radius: 30px;
+    height: 50px; 
+    padding-left: 50px;   
+}
+.btn-primary{
+    background-color: blueviolet;
+    margin-top: 30px;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+}
+.login-imgs i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+}
+
+.col-custom{
+    background-color: rgba(255, 255, 255, 0.322);
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    height: 500px;
+  }
+
+  .img-fluid{
+    width: 300px;
+    height: 350px;
+  
+  }
+.navbar .nav-item a{
+    
+}

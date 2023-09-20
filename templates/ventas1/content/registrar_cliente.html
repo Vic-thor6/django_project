@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "ventas1/base_nav.html" %}
+{% block content %}
+<body>
+    <!-- Formulario de registro -->
+    <div class="container w-100" id="formulario-registro">
+        <h1 class="text-center">Registrar</h1>
+      <form class="row w-100" id="registrar_cliente" method="POST"> 
+      {% csrf_token %}       
+          <div class="col align-self-start login-imgs">
+            <input type="text" class="form-control input_login" id="nombre" placeholder="Nombre" name="nombre">
+            <i class="bx bx-user login-imgs"></i>
+          </div>
+          <div class="col align-self-end login-imgs ">
+            <input type="text" class="form-control input_login" id="apellido" placeholder="Apellido" name="apellido">
+            <i class="bx bx-user login-imgs"></i>
+          </div>
+          <div class="col-xl-12 login-imgs">
+            <input type="email" class="form-control input_login" id="correo" placeholder="Correo" name="correo">
+            <i class="bx bx-envelope login-imgs"></i>
+          </div>
+          <div class="col-xl-12 login-imgs">
+            <input type="password" class="form-control input_login" id="contrasena" placeholder="Constraseña" name="contrasena">
+            <i class="bx bx-lock login-imgs"></i>
+          </div>
+          <div class="col-xl-12 login-imgs">
+            <input type="password" class="form-control input_login" id="recontrasena" placeholder="Repertir Constraseña" name="recontrasena">
+            <i class="bx bx-lock login-imgs"></i>
+          </div>
+          <div class="col align-self-end">
+            <input type="checkbox" class="form-check-input" id="aceptaTerminos">
+            <label class="form-check-label" for="exampleCheck1">Acepta las condiciones</label>
+          </div>    
+          <div class="col-xl-6 w-100" >
+            <button type="submit" class="btn btn-primary w-100 btn-login" id="registrar-form">Registrar</button>
+          </div>        
+      </form>
+    </div>
+</body>
+{% endblock content %}
