@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Imagen</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.title }}</td>
+                    <td>${{ producto.price }}</td>
+                    <td>{{ producto.description }}</td>
+                    <td>{{ producto.category }}</td>
+                    <td><img src="{{ producto.image }}" alt="{{ producto.title }}" width="100"></td>
+                    <td>{{ producto.rating.rate }} ({{ producto.rating.count }} )</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
